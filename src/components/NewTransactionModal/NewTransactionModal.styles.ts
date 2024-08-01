@@ -69,9 +69,46 @@ export const CloseButton = styled(Dialog.Close)`
   color: ${({ theme }) => theme["gray-500"]};
 
   &:hover {
-    color: ${({ theme }) => theme["green-500"]};
-    transition: color 0.2s;
+    /**Create background rouded and icon transition */
+    border-radius: 6px;
+    background: ${({ theme }) => theme["gray-700"]};
+    transition: background-color 0.2s;
+  }
+`
+
+export const TransactionTypeContainer = styled.div`
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-top: 0.5rem;
+`;
+
+interface TransactionTypeButtonProps {
+  variant: 'income' | 'outcome';
+}
+
+export const TransactionTypeButton = styled.button<TransactionTypeButtonProps>`
+  background: ${({ theme }) => theme["gray-700"]};
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border-radius: 6px;
+  cursor: pointer;
+  border: 0;
+  color: ${({ theme }) => theme["gray-300"]};
+
+  svg {
+    color: ${({ theme, variant }) => variant === 'income' ? theme["green-300"] : theme["red-300"]};
   }
 
+  /* &:hover {
+    background: ${({ theme, variant }) => variant === 'income' ? theme["green-700"] : theme["red-700"]};
+    svg {
+      color: ${({ theme }) => theme["white"]};
+    }
+  } */
 
-`
+
+`;
