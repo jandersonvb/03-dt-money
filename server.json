@@ -23,6 +23,30 @@
       "category": "Casa",
       "price": 1000,
       "createdAt": "2024-08-01T10:17:10.307Z"
+    },
+    {
+      "description": "Desenvolvimento de app",
+      "price": 10000,
+      "category": "Venda",
+      "type": "income",
+      "createdAt": "2024-08-06T12:59:33.874Z",
+      "id": 4
+    },
+    {
+      "description": "Venda de PC",
+      "price": 5000,
+      "category": "Vendas",
+      "type": "income",
+      "createdAt": "2024-08-06T16:56:51.852Z",
+      "id": 5
+    },
+    {
+      "description": "Pastel",
+      "price": 5,
+      "category": "Alimentação",
+      "type": "outcome",
+      "createdAt": "2024-08-06T17:46:37.287Z",
+      "id": 6
     }
   ]
 }
